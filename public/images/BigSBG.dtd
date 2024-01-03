@@ -1,0 +1,22 @@
+<!ELEMENT svg (defs,g)>
+<!ATTLIST svg viewBox CDATA #REQUIRED>
+<!ELEMENT defs (style,linearGradient)>
+<!ELEMENT style (#PCDATA)>
+<!ELEMENT linearGradient (stop+)>
+<!ATTLIST linearGradient id NMTOKEN #REQUIRED>
+<!ATTLIST linearGradient x1 NMTOKEN #REQUIRED>
+<!ATTLIST linearGradient y1 NMTOKEN #REQUIRED>
+<!ATTLIST linearGradient x2 NMTOKEN #REQUIRED>
+<!ATTLIST linearGradient y2 NMTOKEN #REQUIRED>
+<!ATTLIST linearGradient gradientUnits NMTOKEN #REQUIRED>
+<!ELEMENT stop EMPTY>
+<!ATTLIST stop offset NMTOKEN #REQUIRED>
+<!ATTLIST stop stop-color CDATA #REQUIRED>
+<!ATTLIST stop stop-opacity NMTOKEN #REQUIRED>
+<!ELEMENT g (g?,path?)>
+<!ATTLIST g class NMTOKEN #IMPLIED>
+<!ATTLIST g id NMTOKEN #IMPLIED>
+<!ATTLIST g data-name CDATA #IMPLIED>
+<!ELEMENT path EMPTY>
+<!ATTLIST path class NMTOKEN #REQUIRED>
+<!ATTLIST path d CDATA #REQUIRED>

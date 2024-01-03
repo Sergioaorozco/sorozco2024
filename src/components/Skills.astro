@@ -1,0 +1,33 @@
+---
+const sergioSkills = [
+  {name:'VueJs', icon: '/icons/VueLogo.svg', description: 'icon of VueJs Language or Tool'},
+  {name:'Astro', icon: '/icons/Astrologo.svg', description: 'icon of VueJs Language or Tool'},
+  {name:'Tailwind', icon: '/icons/TailwindLogo.svg', description: 'icon of VueJs Language or Tool'},
+  {name:'Pinia', icon: '/icons/PiniaLogo.svg', description: 'icon of VueJs Language or Tool'},
+  {name:'Firebase', icon: '/icons/firebase.svg', description: 'icon of VueJs Language or Tool'},
+  {name:'Redis', icon: '/icons/RedisLogo.svg', description: 'icon of VueJs Language or Tool'},
+  {name:'JavaScript', icon: '/icons/JavascriptLogo.svg', description: 'icon of VueJs Language or Tool'},
+  {name:'OpenApi Specs', icon: '/icons/OpenApiLogo.svg', description: 'icon of VueJs Language or Tool'},
+  {name:'Git', icon: '/icons/GitLogo.svg', description: 'icon of VueJs Language or Tool'},
+  ]
+---
+
+<section class="wrapper text-slate-600 mt-5">
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-3 gap-y-3">
+    {sergioSkills.map((item) => (
+      <div class="border border-slate-200 bg-white rounded-md py-3 px-4 hover:-translate-y-1 transition-all duration-200">
+        <figure class="flex gap-x-3 items-center skillSection h-14">
+          <img class="w-10" height="10px" src={item.icon} alt={item.description}>
+          <div class="">
+            <p class="leading-tight m-0 font-bold text-lg">{item.name}</p>
+            <p class="leading-tight m-0 text-slate-500 text-sm">{item.description}</p>
+          </div>
+        </figure>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style is:global>
+  .skillSection img{ height: -webkit-fill-available;}  
+</style>

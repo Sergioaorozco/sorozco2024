@@ -4,6 +4,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import './src/MainCSS.css';
+
 ---
 
 <!doctype html>
@@ -24,7 +26,6 @@ const { title } = Astro.props;
   </body>
 </html>
 <style is:global>
-
   :root {
     color-scheme: light dark;
   }
@@ -34,8 +35,5 @@ const { title } = Astro.props;
     font-family: 'Onest', sans-serif;
   }
 
-  .wrapper {
-    max-inline-size: 1200px;
-    padding-inline: 2em;
-  }
+  .wrapper { max-inline-size: 1200px; }
 </style>

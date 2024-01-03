@@ -1,0 +1,11 @@
+---
+const { TitleSec } = Astro.props;
+---
+
+<section class="text-slate-800 wrapper mx-auto mt-10 mb-12">
+  <div>
+    <h1 class="text-xl">{TitleSec}</h1>
+    <hr>
+  </div>
+  <slot></slot>
+</section>

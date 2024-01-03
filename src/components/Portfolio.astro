@@ -1,0 +1,34 @@
+---
+const projects = [
+  {name:'PetgenAi', URL:'https://petgen-ai.vercel.app/',background:'from-amber-100',img:'https://i.postimg.cc/KvfHx1v9/Meta-Image.jpg', frameworks:['VueJs', 'Pinia', 'Google Ai'], description:'Project for Testing porpuses',},
+  {name:'Vueshop', URL:'https://vue-blood.vercel.app/',background:'from-slate-100 to-trasparent',img:'/images/project-vueshop.webp', frameworks:['VueJs', 'Pinia', 'Firebase'], description:'Project for Testing porpuses',},
+  {name:'Redil Digital', URL:'https://elredillaureles.org/',background:'from-white',img:'/images/project-redillaureles.webp', frameworks:['WordPress'], description:'Project for Testing porpuses',},
+  {name:'Vue Bingo', URL:'https://vue-bingo-lyart.vercel.app/',background:'from-slate-800 text-white',img:'/images/vueBingoPortrait.webp', frameworks:['JavaScript','Tailwind'], description:'Project for Testing porpuses',},
+  {name:'SolarBoard', URL:'https://solarboard.vercel.app/',background:'from-slate-900 text-white',img:'/images/solarboard.webp', frameworks:['VueJs', 'Firebase'], description:'Project for Testing porpuses',},
+  {name:'LegalStatus', URL:'https://legal-status.vercel.app/',background:'from-slate-200',img:'/images/legalStatus.webp', frameworks:['VueJs', 'Pinia', 'Firebase'], description:'Project for Testing porpuses',},
+]
+import './src/MainCSS.css';
+
+---
+
+<div class="grid lg:grid-cols-4 grid-cols-1 gap-3 mt-5 lg:gridPortfolio">
+  {projects.map((proj) => (
+    <a href={proj.URL} target="_blank" rel="noopener noreferrer" class="card">
+      <div class="shadow-sm border border-slate-300 rounded-lg lg:h-60 h-48 flex flex-col relative bg-cover bg-center justify-between overflow-clip">
+        <img class="absolute top-0 right-0 left-0 h-full object-cover w-full" src={proj.img} alt="image of projects">
+        <ul class="relative top-2 right-2 flex gap-x-1 justify-end z-10">
+          {proj.frameworks.map((item) => (
+            <li class="text-sm font-semibold bg-black/95 rounded-full px-2 text-white">{item}</li>
+          ))}
+        </ul>
+        <div class="bg-gradient-to-t px-3 h-full flex flex-col justify-end pb-4 to-transparent absolute top-0 right-0 left-0 hover:bg-slate-100/60 transition-all duration-300" class:list={proj.background}>
+          <p class="items-end font-bold leading-tight">{proj.name}</p>
+          <p class="items-end text-sm leading-tight">{proj.description}</p>
+        </div>
+      </div>
+    </a>
+  ))}
+</div>
+
+<style>
+</style>

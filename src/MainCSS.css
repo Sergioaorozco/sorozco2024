@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .gridPortfolio {
+    .card:nth-child(2) { @apply col-span-2; }
+    .card:nth-child(5) { @apply col-span-2; }   
+  }
+}
