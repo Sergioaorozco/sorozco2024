@@ -1,7 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import BlogIndex from '../islands/blogIndex.vue'
 
 ---
 <Layout title="Blog | Frontend Developer | Sergio Orozco">
-  <h1>Blog</h1>
+  <BlogIndex client:load></BlogIndex>
 </Layout>
