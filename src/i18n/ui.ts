@@ -30,10 +30,10 @@ export const ui = {
     'portfolio.legalStatus': 'Fetching Data Exercise',
   },
   es: {
-    'nav.download': 'Download CV',
-    'cv.url': 'https://drive.google.com/file/d/1ejb8mxauWs89YloocfUZoO5Of2YkgwJJ/view?usp=sharing',
+    'nav.download': 'Descargar HV',
+    'download.url': 'https://drive.google.com/file/d/1ejb8mxauWs89YloocfUZoO5Of2YkgwJJ/view?usp=sharing',
     'nav.blog': 'Blog',
-    'main.greet': "Hi there,I'm",
+    'main.greet': " Hola, soy",
     'main.title': "FrontEnd Developer",
     'main.company': "at SproutLoud Media Networks",
     'section.about': "About Me",
