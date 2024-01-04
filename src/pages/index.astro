@@ -37,23 +37,16 @@ const social = [
     <main class="wrapper m-auto flex gap-x-4 justify-center items-center mt-10">
       <div class="lg:text-balance text-center">
         <p class="text-3xl lg:text-5xl">Hi There, I'm</p>
-        <h1 class="text-5xl lg:text-6xl font-extrabold uppercase">
-          Sergio Orozco
-        </h1>
+        <h1 class="text-5xl lg:text-6xl font-extrabold uppercase">Sergio Orozco</h1>
         <div class="flex flex-col gap-3 justify-center items-center">
-          <h2 class="text-2xl lg:text-4xl font-semibold">
-            Front-end Developer
-          </h2>
+          <h2 class="text-2xl lg:text-4xl font-semibold">Front-end Developer </h2>
+          <a class="text-xl bg-white text-slate-900 font-bold italic hover:bg-slate-900 hover:text-white transition-colors duration-200 rounded-full px-4 py-2" href="#" target="_blank">at SproutLoud Media Networks</a>
           <ul class="flex gap-x-2 items-center">
             {
               social.map((icon) => (
                 <li class="hover:brightness-150 hover:filter transition-all duration-200">
                   <a href={icon.URL} target="_blank" rel="noopener noreferrer">
-                    <img
-                      class="size-14"
-                      src={icon.img}
-                      alt={`icon for ${icon.name}`}
-                    />
+                    <img class="size-14" src={icon.img} alt={`icon for ${icon.name}`}/>
                   </a>
                 </li>
               ))
@@ -62,18 +55,11 @@ const social = [
         </div>
       </div>
     </main>
-    <img src="/imges/BigSBG.svg" alt="">
   </section>
   <SectionC TitleSec="About Me">
     <div class="mt-5 flex justify-between gap-x-7 flex-col lg:flex-row">
       <div class="text-balance flex flex-col gap-y-2 text-center lg:text-left">
-        <p>
-          Mid-level frontend developer crafting user-friendly, engaging
-          experiences with VueJs and Astro. Proficient in <strong
-            >agile methodologies(SAFe)</strong
-          > and teamwork, I bring a strong work ethic and passion for excellence
-          to help your team achieve its goals.
-        </p>
+        <p>Mid-level frontend developer crafting user-friendly, engaging experiences with VueJs and Astro. Proficient in <strong>agile methodologies(SAFe)</strong> and teamwork, I bring a strong work ethic and passion for excellence to help your team achieve its goals.</p>
       </div>
       <div class="bg-slate-500 rounded w-3/4 h-full relative"></div>
     </div>
