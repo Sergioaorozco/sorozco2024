@@ -5,6 +5,7 @@ interface Props {
 
 const { title } = Astro.props;
 import './src/MainCSS.css';
+import WebNav from "../components/WebNav.astro";
 import { ViewTransitions } from "astro:transitions";
 import RightArrow from '../assets/RightArrow.astro';
 
@@ -44,10 +45,11 @@ const social = [
   <body class="bg-slate-100">
     <div class="w-full h-screen py-5 px-5">
       <div class="rounded-2xl m-0 min-h-full lg:px-8 px-4 py-2 lg:py-3 bg-gradient-to-b from-slate-200 to-slate-400">
+        <WebNav></WebNav>
         <slot />
       </div>
     </div>
-    <footer class="flex justify-between items-center pb-5 pt-3 px-5 bg-white fixed bottom-0 w-full">
+    <footer class="flex justify-between items-center pb-5 pt-3 px-5 bg-white fixed w-full bottom-0">
       <ul class="flex gap-x-2 items-center justify-center lg:justify-start">
         {
           social.map((icon) => (
@@ -65,13 +67,6 @@ const social = [
   </body>
 </html>
 <style is:global>
-  :root {
-    color-scheme: light dark;
-  }
-  body {
-    color: #f5f5f5;
-    font-family: 'Onest', sans-serif;
-  }
-
+  body { font-family: 'Onest', sans-serif;}
   .wrapper { max-inline-size: 1200px; }
 </style>

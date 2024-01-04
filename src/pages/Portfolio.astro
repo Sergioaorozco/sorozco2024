@@ -1,5 +1,16 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import Portfolio from "../components/Portfolio.astro";
 
 ---
-
-<h1>Portfolio</h1>
+<Layout title="Blog | Frontend Developer | Sergio Orozco">
+  <main class="grid lg:grid-cols-5 grid-cols-1 h-full mt-5 relative">
+    <section class="mt-5 px-3 flex flex-col text-slate-600">
+      <h1 class="text-3xl lg:text-4xl font-bold">Portfolio</h1>
+      <p class="mt-5">Latest FrontEnd projects</p>
+    </section>
+    <section class="px-5 mb-10 col-span-4">
+    <Portfolio></Portfolio>
+    </section>
+  </main>
+</Layout>
