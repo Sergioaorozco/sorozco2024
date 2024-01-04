@@ -3,7 +3,7 @@ export const languages = {
   es: 'Español',
 };
 
-export const defaultLanguage = 'es';
+export const defaultLanguage = 'en';
 
 export const ui = {
   en: {
@@ -17,6 +17,7 @@ export const ui = {
     'about.content': "Mid-level frontend developer crafting user-friendly, engaging experiences with VueJs and Astro. Proficient in agile methodologies(SAFe) and teamwork, I bring a strong work ethic and passion for excellence to help your team achieve its goals.",
     'section.tools': "Tools",
     'tools.vue': 'Reactive Web Components',
+    'tools.astro': 'Server side rendering, Islands',
     'tools.firebase': 'Realtime Database and Authentication',
     'tools.tailwind': 'CSS Framework',
     'tools.openapi': 'Latest Standards Specs',
@@ -34,22 +35,23 @@ export const ui = {
     'download.url': 'https://drive.google.com/file/d/1ejb8mxauWs89YloocfUZoO5Of2YkgwJJ/view?usp=sharing',
     'nav.blog': 'Blog',
     'main.greet': " Hola, soy",
-    'main.title': "FrontEnd Developer",
-    'main.company': "at SproutLoud Media Networks",
-    'section.about': "About Me",
-    'about.content': "Mid-level frontend developer crafting user-friendly, engaging experiences with VueJs and Astro. Proficient in agile methodologies(SAFe) and teamwork, I bring a strong work ethic and passion for excellence to help your team achieve its goals.",
-    'section.tools': "Tools",
-    'tools.vue': 'Reactive Web Components',
-    'tools.firebase': 'Realtime Database and Authentication',
-    'tools.tailwind': 'CSS Framework',
-    'tools.openapi': 'Latest Standards Specs',
-    'tools.pinia': 'Store Library for Vue',
-    'section.portfolio': "Portfolio",
-    'portfolio.shop': 'E-commerce with payment gateway',
-    'portfolio.game': 'JavaScript Bingo Game',
-    'portfolio.redil': 'Christian Baptist Church',
-    'portfolio.dash': 'Frontend Dashboard',
-    'portfolio.generativeAI': 'Random name generation with AI',
-    'portfolio.legalStatus': 'Fetching Data Exercise',
+    'main.title': "Desarrollador FrontEnd",
+    'main.company': "en SproutLoud Media Networks",
+    'section.about': "Acerca de Mi",
+    'about.content': "Desarrollador frontend de nivel medio creando experiencias atractivas y fáciles de usar con VueJs y Astro. Proficiente en metodologías ágiles (SAFe) y trabajo en equipo, aporto una fuerte ética de trabajo y pasión por la excelencia para ayudar a tu equipo a alcanzar sus objetivos.",
+    'section.tools': "Habilidades",
+    'tools.vue': 'Componentes Web Reactivos',
+    'tools.astro': 'Render en Cliente, Islas',
+    'tools.firebase': 'Base de datos y Autenticación',
+    'tools.tailwind': 'Framework CSS',
+    'tools.openapi': 'Especificaciones con últimos estándares',
+    'tools.pinia': 'Store para VueJs',
+    'section.portfolio': "Portafolio",
+    'portfolio.shop': 'Tienda virtual con pasarela de pagos',
+    'portfolio.game': 'Juego de Bingo con JavaScript',
+    'portfolio.redil': 'Iglesia Bautista',
+    'portfolio.dash': 'Panel de control',
+    'portfolio.generativeAI': 'Inteligencia Artificial Generativa',
+    'portfolio.legalStatus': 'Ejercicio de Datos',
   },
 } as const;

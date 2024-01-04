@@ -5,7 +5,27 @@ interface Props {
 
 const { title } = Astro.props;
 import './src/MainCSS.css';
+import { ViewTransitions } from "astro:transitions";
+import RightArrow from '../assets/RightArrow.astro';
 
+
+const social = [
+  {
+    name: "LinkedIn",
+    URL: "https://www.linkedin.com/in/sergiorozco/",
+    img: "/icons/social/Linkedin.svg",
+  },
+  {
+    name: "Github",
+    URL: "https://github.com/Sergioaorozco",
+    img: "/icons/social/Github.svg",
+  },
+  {
+    name: "Whatsapp",
+    URL: "https://api.whatsapp.com/send?phone=573007869517",
+    img: "/icons/social/Whatsapp.svg",
+  },
+];
 ---
 
 <!doctype html>
@@ -22,7 +42,26 @@ import './src/MainCSS.css';
     <title>{title}</title>
   </head>
   <body class="bg-slate-100">
-    <slot />
+    <div class="w-full h-screen py-5 px-5">
+      <div class="rounded-2xl m-0 min-h-full lg:px-8 px-4 py-2 lg:py-3 bg-gradient-to-b from-slate-200 to-slate-400">
+        <slot />
+      </div>
+    </div>
+    <footer class="flex justify-between items-center pb-5 pt-3 px-5 bg-white fixed bottom-0 w-full">
+      <ul class="flex gap-x-2 items-center justify-center lg:justify-start">
+        {
+          social.map((icon) => (
+            <li class="hover:brightness-50 hover:filter transition-all duration-200">
+              <a href={icon.URL} target="_blank" rel="noopener noreferrer">
+                <img class="size-8" src={icon.img} alt={`icon for ${icon.name}`}/>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <a class="bg-amber-500 text-slate-900 font-bold italic text-sm lg:text-md hover:bg-amber-400 transition-all duration-200 rounded-full px-4 py-2 flex gap-x-2 items-center hover:gap-x-4 w-fit" href="#" target="_blank">Download CV<span><RightArrow></RightArrow></span></a>
+    </footer>
+    <ViewTransitions></ViewTransitions>
   </body>
 </html>
 <style is:global>
@@ -30,7 +69,6 @@ import './src/MainCSS.css';
     color-scheme: light dark;
   }
   body {
-    padding-inline: 2em;
     color: #f5f5f5;
     font-family: 'Onest', sans-serif;
   }
