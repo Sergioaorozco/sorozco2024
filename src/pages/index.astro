@@ -6,7 +6,7 @@ import RightArrow from "../assets/RightArrow.astro";
 ---
 
 <Layout title="Sergio Orozco | Frontend Developer | VueJs, Astro, Tailwind">
-      <main class="grid lg:grid-cols-3 grid-cols-1 h-full mt-5 relative">
+      <main class="grid lg:grid-cols-3 grid-cols-1 mt-5">
         <section aria-label="Main Information" class="mt-5 px-3 flex flex-col justify-between text-slate-600">
           <div class="lg:text-balance text-center lg:text-left">
             <p class="text-3xl lg:text-5xl">Hi There, I'm</p>
@@ -20,13 +20,16 @@ import RightArrow from "../assets/RightArrow.astro";
             </div>
           </div>
         </section>
-        <section class="col-span-2 lg:max-h-min h-full lg:overflow-auto px-5 mb-10 lg:mb-0">
-          <SectionC TitleSec="Awards">
-            <div class="mt-5 bg-slate-500 rounded-lg h-56 py-4 px-5"></div>
-          </SectionC>
-          <SectionC TitleSec="Tools">
-            <Skills />
-          </SectionC>
+        <section class="col-span-2 px-5 mb-10 lg:mb-0">
+          <div>
+            <SectionC TitleSec="Awards">
+              <div class="mt-5 bg-slate-500 rounded-lg h-56 py-4 px-5"></div>
+            </SectionC>
+            <SectionC TitleSec="Tools">
+              <Skills />
+            </SectionC>
+          </div>
         </section>
       </main>
 </Layout>
+
