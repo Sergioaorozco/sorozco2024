@@ -38,52 +38,35 @@ const social = [
     <link rel="icon" type="image/svg+xml" href="/icons/favicon_sorozco.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Onest:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="text-white noiseBg">
-    <div class="px-6">
-     <WebNav></WebNav>
+  <body class="bg-slate-100 h-full">
+    <div class="w-full h-auto py-5 px-5">
+      <div class="rounded-2xl m-0 lg:px-8 px-4 py-2 lg:py-3 bg-gradient-to-b from-slate-200 to-slate-300 h-auto">
+        <WebNav></WebNav>
+        <slot />
+      </div>
     </div>
-    <section class="px-5 flex flex-col">
-      <slot />
-    </section>
-    <!-- Transitions -->
+    <footer class="flex justify-between items-center pb-5 pt-3 px-5 bg-white fixed w-full bottom-0">
+      <ul class="flex gap-x-2 items-center justify-center lg:justify-start">
+        {
+          social.map((icon) => (
+            <li class="hover:brightness-50 hover:filter transition-all duration-200">
+              <a href={icon.URL} target="_blank" rel="noopener noreferrer">
+                <img class="size-8" src={icon.img} alt={`icon for ${icon.name}`}/>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <a class="bg-amber-500 text-slate-900 font-bold italic text-sm lg:text-md hover:bg-amber-400 transition-all duration-200 rounded-full px-4 py-2 flex gap-x-2 items-center hover:gap-x-4 w-fit" href="#" target="_blank">Download CV<span><RightArrow></RightArrow></span></a>
+    </footer>
     <ViewTransitions></ViewTransitions>
   </body>
 </html>
 <style is:global>
   body { font-family: 'Onest', sans-serif;}
   .wrapper { max-inline-size: 1200px; }
-  .noiseBg {
-    background: url('../images/noisebg.png');
-    background-color: rgb(28, 32, 46);
-    /* background-color: rgb(30, 41, 59); */
-  }
-  .noiseBg:after {
-  animation: grain 8s steps(10) infinite;
-  background-image: url('../images/noisebg.png');
-  content: "";
-  height: 300%;
-  left: -50%;
-  opacity: 0.3;
-  position: fixed;
-  z-index: -10;
-  top: -100%;
-  width: 300%;
-}
-
-@keyframes grain {
-  0%, 100% { transform:translate(0, 0) }
-  10% { transform:translate(-5%, -10%) }
-  20% { transform:translate(-15%, 5%) }
-  30% { transform:translate(7%, -25%) }
-  40% { transform:translate(-5%, 25%) }
-  50% { transform:translate(-15%, 10%) }
-  60% { transform:translate(15%, 0%) }
-  70% { transform:translate(0%, 15%) }
-  80% { transform:translate(3%, 35%) }
-  90% { transform:translate(-10%, 10%) }
-}
 </style>
