@@ -41,7 +41,7 @@ const social = [
                     social.map((icon) => (
                       <li class="hover:brightness-150 hover:filter transition-all duration-200">
                         <a href={icon.URL} target="_blank" rel="noopener noreferrer">
-                          <img class="size-8" src={icon.img} alt={`icon for ${icon.name}`}/>
+                          <img class="lg:size-8 size-16" src={icon.img} alt={`icon for ${icon.name}`}/>
                         </a>
                       </li>
                     ))
@@ -58,46 +58,58 @@ const social = [
               <Skills />
             </SectionC>
             <SectionC TitleSec="Awards and Certifications">
-              <div class="flex flex-col lg:flex-row gap-2 mt-5 h-44">
-                <a href="#" class="bg-gradient-to-b flex flex-grow from-slate-950 to-emerald-900 rounded-lg py-4 px-5 overflow-clip relative group">
+              <div class="flex flex-col lg:flex-row gap-2 mt-5">
+                <a href="#" class="bg-gradient-to-b flex flex-grow from-slate-950 to-emerald-900 rounded-lg py-4 px-5 overflow-clip relative group h-44">
                   <div class="relative z-10">
                     <p class="text-2xl lg:text-3xl font-semibold text-slate-300">VueJs Developer</p>
                     <p>Certification</p>
                   </div>
                   <img src="../icons/VueLogo.svg" alt="" class="group-hover:-rotate-12 transition-all duration-500 absolute -left-4 rotate-2 h-full mix-blend-multiply opacity-40 -top-2">
-                  <div class="absolute flex items-center bg-amber-500 px-2 h-12 opacity-50 bottom-0 lg:-bottom-20 left-0 right-0 text-slate-900 group-hover:bottom-0 group-hover:opacity-100 transition-all duration-200 notesCard">
+                  <div class="absolute flex items-center bg-amber-500 px-2 h-12 bottom-0 lg:-bottom-20 left-0 right-0 text-slate-900 group-hover:bottom-0 group-hover:opacity-100 transition-all duration-200 notesCard">
                     <p class="flex justify-between w-full">
-                      <span class="font-bold">2023 - See Certification</span>
+                      <span class="font-semibold text-sm">2023 - See Certification</span>
                       <RightArrow></RightArrow>
                     </p>
                   </div>
                 </a>
-                <a href="#" class="bg-gradient-to-b flex flex-grow from-slate-950 to-red-900 rounded-lg py-4 px-5 overflow-clip relative group">
+                <a href="#" class="bg-gradient-to-b flex flex-grow from-slate-950 to-red-900 rounded-lg py-4 px-5 overflow-clip relative group h-44">
                   <div class="relative z-10">
                     <p class="text-2xl lg:text-3xl font-semibold text-slate-300">Redis University</p>
                     <p>JavaScript Developer</p>
                   </div>
                   <img src="../icons/RedisLogo.svg" alt="" class="group-hover:-rotate-12 transition-all duration-500 absolute -left-4 rotate-2 h-full mix-blend-multiply opacity-40 -top-2">
-                  <div class="absolute flex items-center bg-amber-500 px-2 h-12 opacity-50 bottom-0 lg:-bottom-20 left-0 right-0 text-slate-900 group-hover:bottom-0 group-hover:opacity-100 transition-all duration-200 notesCard">
+                  <div class="absolute flex items-center bg-amber-500 px-2 h-12 bottom-0 lg:-bottom-20 left-0 right-0 text-slate-900 group-hover:bottom-0 group-hover:opacity-100 transition-all duration-200 notesCard">
                     <p class="flex justify-between w-full">
-                      <span class="font-bold">2023 - See Certification</span>
+                      <span class="font-semibold text-sm">2023 - See Certification</span>
                       <RightArrow></RightArrow>
                     </p>
                   </div>
                 </a>
-                <div class="bg-gradient-to-b flex from-slate-950 flex-grow to-blue-900 rounded-lg py-4 px-5 overflow-clip relative group cursor-grab">
+                <div class="bg-gradient-to-b flex from-slate-950 flex-grow to-blue-900 rounded-lg py-4 px-5 overflow-clip relative group cursor-grab h-44">
                   <div class="relative z-10">
                     <p class="text-2xl lg:text-3xl font-semibold text-slate-300">Rookie of the Year</p>
                     <p>Sproutloud Media Networks</p>
                   </div>
                   <img src="../images/Awward.svg" alt="" class="group-hover:-rotate-12 transition-all duration-500 absolute -left-4 rotate-2 h-full mix-blend-multiply opacity-40 -top-2">
-                  <div class="absolute flex items-center bg-amber-500 px-2 h-12 opacity-50 bottom-0 lg:-bottom-20 left-0 right-0 text-slate-900 group-hover:bottom-0 group-hover:opacity-100 transition-all duration-200 notesCard">
+                  <div class="absolute flex items-center bg-amber-500 px-2 h-12 bottom-0 lg:-bottom-20 left-0 right-0 text-slate-900 group-hover:bottom-0 group-hover:opacity-100 transition-all duration-200 notesCard">
                     <p class="w-full">
-                      <span class="font-bold">2022 - Employee Annual Awards</span>
+                      <span class="font-semibold text-sm">2022 - Employee Annual Awards</span>
                     </p>
                   </div>
                 </div>
 
+              </div>
+            </SectionC>
+            <SectionC TitleSec="Education">
+              <div class="border border-slate-600 rounded-lg py-4 px-3 mt-5">
+                <div class="flex gap-x-4 ">
+                  <span>2023 - Now</span>
+                  <span>SproutLoud Media Networks</span>
+                </div>
+                <div class="flex gap-x-4">
+                  <span>2021 - 2022</span>
+                  <span>Webhelp</span>
+                </div>
               </div>
             </SectionC>
           </div>
