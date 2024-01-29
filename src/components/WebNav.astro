@@ -11,10 +11,10 @@ const menu = [
 <nav class="lg:flex justify-between items-center mt-5 m-auto z-10 relative top-0 hidden text-white">
   <a href="/" class="size-9"><img src="/images/header-logo.svg" alt="Logo Sergio Orozco"></a>
   <div class="flex gap-x-3 items-center">
-    <ul class="flex gap-x-3 text-white">
+    <ul class="flex gap-x-3 text-white text-lg">
       {
         menu.map(item => (
-          <li><a href={item.url}>{item.name}</a></li>
+          <li class="hover:text-slate-300 transition-colors duration-300"><a href={item.url}>{item.name}</a></li>
         ))
       }
     </ul>
@@ -24,7 +24,7 @@ const menu = [
 
 
 <!-- Mobile Navigation -->
-<nav class="lg:hidden flex justify-between items-center mt-5 px-5">
+<nav class="lg:hidden flex justify-between items-center mt-5 px-2">
   <a href="/" class="size-5"><img src="/images/header-logo.svg" alt="Logo Sergio Orozco"></a>
   <MenuMobile></MenuMobile>
 </nav>
