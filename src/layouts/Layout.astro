@@ -43,9 +43,10 @@ const social = [
     <title>{title}</title>
   </head>
   <body class="text-white noiseBg">
-    <section class="flex flex-col">
-      <slot/>
-    </section>
+    <div class="px-6">
+     <WebNav></WebNav>
+    </div>
+    <slot/>
     <!-- Transitions -->
     <ViewTransitions></ViewTransitions>
   </body>
