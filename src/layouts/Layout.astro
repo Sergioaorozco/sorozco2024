@@ -5,30 +5,7 @@ interface Props {
 
 const { title } = Astro.props;
 import '../styles/MainCSS.css';
-import WebNav from "../components/WebNav.astro";
-
-
 import { ViewTransitions } from "astro:transitions";
-import RightArrow from '../assets/RightArrow.astro';
-
-
-const social = [
-  {
-    name: "LinkedIn",
-    URL: "https://www.linkedin.com/in/sergiorozco/",
-    img: "/icons/social/Linkedin.svg",
-  },
-  {
-    name: "Github",
-    URL: "https://github.com/Sergioaorozco",
-    img: "/icons/social/Github.svg",
-  },
-  {
-    name: "Whatsapp",
-    URL: "https://api.whatsapp.com/send?phone=573007869517",
-    img: "/icons/social/Whatsapp.svg",
-  },
-];
 ---
 
 <!doctype html>
@@ -54,13 +31,13 @@ const social = [
   body { font-family: 'Figtree', sans-serif;}
   .wrapper { max-inline-size: 95%; }
   .noiseBg {
-    background: url('../images/noisebg.png');
+    background: url('/images/noisebg.png');
     background-color: rgb(28, 32, 46);
     /* background-color: rgb(30, 41, 59); */
   }
   .noiseBg:after {
   animation: grain 8s steps(10) infinite;
-  background-image: url('../images/noisebg.png');
+  background-image: url('/images/noisebg.png');
   content: "";
   height: 300%;
   left: -50%;
