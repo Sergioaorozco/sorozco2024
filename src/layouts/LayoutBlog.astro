@@ -6,27 +6,9 @@ interface Props {
 const { title } = Astro.props;
 import '../styles/MainCSS.css';
 import WebNav from "../components/WebNav.astro";
+
+
 import { ViewTransitions } from "astro:transitions";
-import RightArrow from '../assets/RightArrow.astro';
-
-
-const social = [
-  {
-    name: "LinkedIn",
-    URL: "https://www.linkedin.com/in/sergiorozco/",
-    img: "/icons/social/Linkedin.svg",
-  },
-  {
-    name: "Github",
-    URL: "https://github.com/Sergioaorozco",
-    img: "/icons/social/Github.svg",
-  },
-  {
-    name: "Whatsapp",
-    URL: "https://api.whatsapp.com/send?phone=573007869517",
-    img: "/icons/social/Whatsapp.svg",
-  },
-];
 ---
 
 <!doctype html>
@@ -38,35 +20,16 @@ const social = [
     <link rel="icon" type="image/svg+xml" href="/icons/favicon_sorozco.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Gochi+Hand&display=swap" rel="stylesheet">
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bg-slate-100 h-full">
-    <div class="w-full h-auto py-5 px-5">
-      <div class="rounded-2xl m-0 lg:px-8 px-4 py-2 lg:py-3 bg-gradient-to-b from-slate-200 to-slate-300 h-auto">
-        <WebNav></WebNav>
-        <slot />
-      </div>
+  <body class="text-white noiseBg">
+    <div class="px-5">
+      <WebNav></WebNav>
     </div>
-    <footer class="flex justify-between items-center pb-5 pt-3 px-5 bg-white fixed w-full bottom-0">
-      <ul class="flex gap-x-2 items-center justify-center lg:justify-start">
-        {
-          social.map((icon) => (
-            <li class="hover:brightness-50 hover:filter transition-all duration-200">
-              <a href={icon.URL} target="_blank" rel="noopener noreferrer">
-                <img class="size-8" src={icon.img} alt={`icon for ${icon.name}`}/>
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-      <a class="bg-amber-500 text-slate-900 font-bold italic text-sm lg:text-md hover:bg-amber-400 transition-all duration-200 rounded-full px-4 py-2 flex gap-x-2 items-center hover:gap-x-4 w-fit" href="#" target="_blank">Download CV<span><RightArrow></RightArrow></span></a>
-    </footer>
+    <slot/>
+    <!-- Transitions -->
     <ViewTransitions></ViewTransitions>
   </body>
 </html>
-<style is:global>
-  body { font-family: 'Onest', sans-serif;}
-  .wrapper { max-inline-size: 1200px; }
-</style>

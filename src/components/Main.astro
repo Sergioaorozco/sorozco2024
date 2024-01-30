@@ -1,41 +1,47 @@
 ---
 import RightArrow from "../assets/RightArrow.astro";
+import WebNav from "../components/WebNav.astro";
 import { useMotion } from '@vueuse/motion'
 
 ---
-<main class="h-[90vh] w-full flex flex-col justify-around items-center overflow-clip mb-5">
-  <div class="barlowFont flex flex-col justify-center items-center relative px-5 h-[70vh]">
-    <div class="flex justify-center items-center bottom-0 absolute -right-12 -z-10">
-      <img src="/icons/ribbon/SVG/Ribbon.svg" class="size-56 animate-spin animate-duration-[8000ms]" alt="ribbonText" class="absolute -z-10 -right-96 bottom-0">
-      <img src="/icons/ribbon/SVG/Icon.svg" class="size-32 absolute" alt="ribbonText" class="absolute -z-10 -right-96 bottom-0">
-    </div>
-    <img src="/icons/ribbon/SVG/SorozcoType.svg" class="aspect-video"  v-motion width="700" alt="principal typography of Sergio Orozco">
-    <p class="text-white text-3xl lg:text-6xl italic font-semibold lg:leading-[0]">Frontend Developer</p>
+<div class="h-screen">
+  <div class="px-5">
+    <WebNav></WebNav>
   </div>
-  <div class="border-t border-slate-600 w-full px-5 pb-3 h-[92hv]">
-    <div class="flex lg:flex-row justify-center items-center flex-col lg:justify-between mt-4 relative">
-      <a href="https://sproutloud.com/" target="_blank" class="inline-flex bg-slate-700 rounded-full group transition-all duration-500 hover:bg-slate-950 hover:scale-105">
-        <div class="flex items-center">
-          <div class="aspect-square h-16 rounded-full group-hover:bg-slate-200 flex justify-center items-center duration-300 transition-colors">
-            <div class="bg-amber-500 group-hover:bg-blue-500 size-8 rounded-full absolute animate-ping animate-duration-[2000ms]"></div>
-            <span class="bg-slate-800 border-2 p-2 border-white size-10 rounded-full flex justify-center items-center absolute transition-colors duration-300 group-hover:bg-slate-950">
-                <RightArrow></RightArrow>
-            </span>
+  <main class="h-[90vh] w-full flex flex-col justify-around items-center overflow-clip mb-5 relative">
+    <div class="barlowFont flex flex-col justify-center items-center relative px-5 h-[70vh]">
+      <div class="flex justify-center items-center bottom-10 -right-12 -z-10 absolute">
+        <img src="/icons/ribbon/SVG/Ribbon.svg" class="size-56 animate-spin animate-duration-[8000ms]" alt="ribbonText" class="absolute -z-10 -right-96 bottom-0">
+        <img src="/icons/ribbon/SVG/Icon.svg" class="size-32 absolute" alt="ribbonText" class="absolute -z-10 -right-96 bottom-0">
+      </div>
+      <img src="/icons/ribbon/SVG/SorozcoType.svg" class="aspect-video"  v-motion width="700" alt="principal typography of Sergio Orozco">
+      <p class="text-white text-3xl lg:text-6xl italic font-semibold lg:leading-[0]">Frontend Developer</p>
+    </div>
+    <div class="border-t border-slate-600 w-full px-5 pb-3 h-[92hv]">
+      <div class="flex lg:flex-row justify-center items-center flex-col lg:justify-between mt-4 relative">
+        <a href="https://sproutloud.com/" target="_blank" class="inline-flex bg-slate-700 rounded-full group transition-all duration-500 hover:bg-slate-950 hover:scale-105">
+          <div class="flex items-center">
+            <div class="aspect-square h-16 rounded-full group-hover:bg-slate-200 flex justify-center items-center duration-300 transition-colors">
+              <div class="bg-amber-500 group-hover:bg-blue-500 size-8 rounded-full absolute animate-ping animate-duration-[2000ms]"></div>
+              <span class="bg-slate-800 border-2 p-2 border-white size-10 rounded-full flex justify-center items-center absolute transition-colors duration-300 group-hover:bg-slate-950">
+                  <RightArrow></RightArrow>
+              </span>
+            </div>
           </div>
-        </div>
-        <div class="py-3 pl-4 pr-8 leading-tight rounded-r-full relative">
-          <p>Currently at:</p>
-          <p class="font-semibold italic">SproutLoud Media Networks</p>
-        </div>
-      </a>
-      <span class="h-10 flex items-center lg:self-start">
-        <img src="/icons/colombia flag.svg" class="aspect-video" width="30" alt="">
-        <p class="">Based in Medellin, Colombia</p>
-      </span>
+          <div class="py-3 pl-4 pr-8 leading-tight rounded-r-full relative">
+            <p>Currently at:</p>
+            <p class="font-semibold italic">SproutLoud Media Networks</p>
+          </div>
+        </a>
+        <span class="h-10 flex items-center lg:self-start">
+          <img src="/icons/colombia flag.svg" class="aspect-video" width="30" alt="">
+          <p class="">Based in Medellin, Colombia</p>
+        </span>
+      </div>
     </div>
-  </div>
-<!-- figures and Animations -->
-</main>
+  <!-- figures and Animations -->
+  </main>
+ </div>
 
 <style>
   .barlowFont {
