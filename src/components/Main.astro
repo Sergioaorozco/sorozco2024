@@ -9,13 +9,15 @@ import { useMotion } from '@vueuse/motion'
     <WebNav></WebNav>
   </div>
   <main class="h-[90vh] w-full flex flex-col justify-around items-center mb-5 relative">
-    <div class="barlowFont flex flex-col justify-center items-center relative px-5 h-[80vh]">
+    <div class="barlowFont flex flex-col justify-center items-center relative px-5">
       <div class="flex justify-center items-center bottom-10 -right-12 -z-10 absolute">
         <img src="/icons/ribbon/SVG/Ribbon.svg" class="size-56 animate-spin animate-duration-[8000ms]" alt="ribbonText" class="absolute -z-10 -right-96 bottom-0">
         <img src="/icons/ribbon/SVG/Icon.svg" class="size-32 absolute" alt="ribbonText" class="absolute -z-10 -right-96 bottom-0">
       </div>
-      <img src="/icons/ribbon/SVG/SorozcoType.svg" class="aspect-video h-[50vh]"  v-motion width="700" alt="principal typography of Sergio Orozco">
-      <p class="text-white text-3xl lg:text-[7vh] italic font-semibold lg:leading-[0]">Frontend Developer</p>
+      <div class="flex flex-col justify-center items-center gap-y-2 h-[80vh]">
+        <img src="/icons/ribbon/SVG/SorozcoType.svg" class="aspect-[100/41] h-fit relative"  v-motion width="700" alt="principal typography of Sergio Orozco">
+        <p class="text-white text-3xl lg:text-[7vh] italic font-semibold lg:leading-none">Frontend Developer</p>
+      </div>
     </div>
     <div class="border-t border-slate-600 w-full px-5 pb-3 h-[92hv]">
       <div class="flex lg:flex-row justify-center items-center flex-col lg:justify-between mt-4 relative">
