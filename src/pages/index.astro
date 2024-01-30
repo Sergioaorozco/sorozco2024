@@ -29,7 +29,7 @@ const certifications = [
     image: "/icons/VueLogo.svg",
     title: "VueJs Developer",
     subtTitle: "Certification",
-    year: "2023",
+    year: "2024",
     description: "See Certification",
     emphasis: "to-emerald-900",
     link: "#",
@@ -38,21 +38,31 @@ const certifications = [
     image: "/icons/RedisLogo.svg",
     title: "Redis University",
     subtTitle: "Certification",
-    year: "2023",
+    year: "2024",
     description: "See Certification",
-    emphasis: "to-red-900",
+    emphasis: "to-red-800/60",
     link: "#",
   },
   {
     image: "/images/Awward.svg",
     title: "Rookie of the Year",
     subtTitle: "Sproutloud Media Networks",
-    year: "2022",
+    year: "2023",
     description: "Employee Annual Awards",
     emphasis: "to-blue-900",
     hideArrow: true,
-    link: "#",
+    link: "",
   },
+  // {
+  //   image: "/images/Awward.svg",
+  //   title: "Delight the Customer",
+  //   subtTitle: "Sproutloud Media Networks",
+  //   year: "2024",
+  //   description: "Employee Annual Awards",
+  //   emphasis: "to-amber-900",
+  //   hideArrow: true,
+  //   link: "",
+  // },
 ];
 ---
 
@@ -106,6 +116,7 @@ const certifications = [
               <Certification
                 title={award.title}
                 subTitle={award.subtTitle}
+                link={award.link}
                 image={award.image}
                 emphasis={award.emphasis}
                 year={award.year}
@@ -117,5 +128,8 @@ const certifications = [
         </div>
       </SectionC>
     </div>
+    <SectionC TitleSec="Top of Heart">
+      <div>Spotify</div>
+    </SectionC>
   </div>
 </Layout>
