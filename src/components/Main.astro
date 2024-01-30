@@ -8,7 +8,10 @@ import { useMotion } from '@vueuse/motion'
   <div class="px-5">
     <WebNav></WebNav>
   </div>
-  <main class="h-[90vh] w-full flex flex-col justify-around items-center mb-5 relative">
+  <!-- <figure class="absolute -z-30 -top-4 bottom-0 w-screen">
+    <img src="/images/CircuitBoard.svg" class="opacity-70 object-cover h-available bg-clip-content" alt="">
+  </figure> -->
+  <main class="h-[90vh] w-full flex flex-col justify-around items-center relative">
     <div class="barlowFont flex flex-col justify-center items-center relative px-5">
       <figure class="flex justify-center items-center top-10 bottom-3 -right-12 -z-10 absolute">
         <img src="/icons/ribbon/SVG/Ribbon.svg" class="size-56 animate-spin animate-duration-[8000ms]" alt="ribbonText" class="relative -z-10">
@@ -45,6 +48,8 @@ import { useMotion } from '@vueuse/motion'
   </main>
  </div>
 
-<style>
+<style is:global>
   .barlowFont { font-family: 'barlow', sans-serif; }
+  .h-available { height: -webkit-fill-available;}
+  .w-available { height: -webkit-fill-available;}
 </style>
