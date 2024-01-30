@@ -4,14 +4,14 @@ import WebNav from "../components/WebNav.astro";
 import { useMotion } from '@vueuse/motion'
 
 ---
-<div class="overflow-clip relative h-screen">
+<div class="overflow-clip relative h-screen flex flex-col justify-between mb-2">
   <div class="px-5">
     <WebNav></WebNav>
   </div>
   <!-- <figure class="absolute -z-30 -top-4 bottom-0 w-screen">
     <img src="/images/CircuitBoard.svg" class="opacity-70 object-cover h-available bg-clip-content" alt="">
   </figure> -->
-  <main class="h-available w-full flex flex-col justify-between py-40 items-center relative">
+  <main class="h-fit w-full flex flex-col items-center relative">
     <div class="barlowFont flex flex-col justify-center items-center relative px-5">
       <figure class="flex justify-center items-center top-10 bottom-3 -right-12 -z-10 absolute">
         <img src="/icons/ribbon/SVG/Ribbon.svg" class="size-56 animate-spin animate-duration-[8000ms]" alt="ribbonText" class="relative -z-10">
@@ -22,30 +22,31 @@ import { useMotion } from '@vueuse/motion'
         <p class="text-white text-3xl lg:text-[7vh] italic font-semibold lg:leading-none">Frontend Developer</p>
       </div>
     </div>
-    <div class="border-t border-slate-600 w-full px-5 h-[10vh]">
-      <div class="flex lg:flex-row justify-center items-center flex-col lg:justify-between mt-4 relative">
-        <a href="https://sproutloud.com/" target="_blank" class="inline-flex bg-slate-700 rounded-full group transition-all duration-500 hover:bg-slate-950 hover:scale-105">
-          <div class="flex items-center">
-            <div class="aspect-square h-16 rounded-full group-hover:bg-slate-200 flex justify-center items-center duration-300 transition-colors">
-              <div class="bg-amber-500 group-hover:bg-blue-500 size-8 rounded-full absolute animate-ping animate-duration-[2000ms]"></div>
-              <span class="bg-slate-800 border-2 p-2 border-white size-10 rounded-full flex justify-center items-center absolute transition-colors duration-300 group-hover:bg-slate-950">
-                  <RightArrow></RightArrow>
-              </span>
-            </div>
-          </div>
-          <div class="py-3 pl-4 pr-8 leading-tight rounded-r-full relative">
-            <p>Currently at:</p>
-            <p class="font-semibold italic">SproutLoud Media Networks</p>
-          </div>
-        </a>
-        <span class="h-10 flex items-center lg:self-start">
-          <img src="/icons/colombia flag.svg" class="aspect-video" width="30" alt="">
-          <p class="">Based in Medellín, Colombia</p>
-        </span>
-      </div>
-    </div>
+
   <!-- figures and Animations -->
   </main>
+  <div class="border-t border-slate-600 w-full pb-6 px-5 h-fit">
+    <div class="flex lg:flex-row justify-center items-center flex-col lg:justify-between mt-4 relative">
+      <a href="https://sproutloud.com/" target="_blank" class="inline-flex bg-slate-700 rounded-full group transition-all duration-500 hover:bg-slate-950 hover:scale-105">
+        <div class="flex items-center">
+          <div class="aspect-square h-16 rounded-full group-hover:bg-slate-200 flex justify-center items-center duration-300 transition-colors">
+            <div class="bg-amber-500 group-hover:bg-blue-500 size-8 rounded-full absolute animate-ping animate-duration-[2000ms]"></div>
+            <span class="bg-slate-800 border-2 p-2 border-white size-10 rounded-full flex justify-center items-center absolute transition-colors duration-300 group-hover:bg-slate-950">
+                <RightArrow></RightArrow>
+            </span>
+          </div>
+        </div>
+        <div class="py-3 pl-4 pr-8 leading-tight rounded-r-full relative">
+          <p>Currently at:</p>
+          <p class="font-semibold italic">SproutLoud Media Networks</p>
+        </div>
+      </a>
+      <span class="h-10 flex items-center lg:self-start">
+        <img src="/icons/colombia flag.svg" class="aspect-video" width="30" alt="">
+        <p class="">Based in Medellín, Colombia</p>
+      </span>
+    </div>
+  </div>
 </div>
 
 <style is:global>
