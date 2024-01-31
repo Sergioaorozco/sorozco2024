@@ -6,12 +6,12 @@
 
   <style>
     #faviconFill {
-      fill: black;
+      fill: white;
     }
 
-    @media (prefers-color-scheme: dark) {
+    @media (prefers-color-scheme: light) {
       #faviconFill {
-        fill: white;
+        fill: black;
       }
     }
   </style>
