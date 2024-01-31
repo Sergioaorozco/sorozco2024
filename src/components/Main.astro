@@ -4,12 +4,12 @@ import WebNav from "../components/WebNav.astro";
 import { useMotion } from '@vueuse/motion'
 
 ---
-<div class="overflow-clip relative h-dvh flex flex-col justify-between mb-2">
+<div class="overflow-clip relative h-dvh flex flex-col justify-between mb-2 bg-[url(/images/AnimatedBg.svg)] bg-no-repeat bg-cover bg-top">
   <div class="px-5">
     <WebNav></WebNav>
   </div>
   <!-- <figure class="absolute -z-30 -top-4 bottom-0 w-screen">
-    <img src="/images/CircuitBoard.svg" class="opacity-70 object-cover h-available bg-clip-content" alt="">
+    <img src="/images/CircuitBoard.svg" class="opacity-70 object-cover object-top h-available" alt="">
   </figure> -->
   <main class="h-fit w-full flex flex-col items-center relative">
     <div class="barlowFont flex flex-col justify-center items-center relative px-5">
