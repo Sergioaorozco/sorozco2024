@@ -39,7 +39,7 @@ export default {
 <template>
 <div @click="openModal"  class="border border-slate-100 px-2 py-1 rounded-lg bg-slate-800/15">Menu</div>
 <div v-if="menuModal" class="w-screen max-h-screen bg-slate-950/90 backdrop-blur-md fixed top-0 bottom-0 left-0 right-0 z-50 px-5">
-  <div class="flex flex-col justify-between h-lvh pb-4">
+  <div class="flex flex-col justify-between h-full pb-4">
     <div class="lg:hidden flex justify-between items-center mt-5 px-2 text-lg">
       <a href="/" class="size-8"><img src="../../images/header-logo.svg" alt="Logo Sergio Orozco"></a>
       <p @click="menuModal = false" class="px-3 py-1 border border-slate-100 rounded-lg">Close</p>
