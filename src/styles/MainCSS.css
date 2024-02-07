@@ -43,12 +43,6 @@ top: -100%;
 width: 300%;
 }
 
-.infoScroll {
-  view-timeline: --subjectReveal block;
-  animation-timeline: --subjectReveal;
-  animation-name: fadeIn;
-  animation-range: entry;
-}
 
 @keyframes grain {
 0%, 100% { transform:translate(0, 0) }
@@ -67,7 +61,7 @@ width: 300%;
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(-1em);
+    transform: translateY(-2em);
   }
   to{
     opacity: 1;
