@@ -33,12 +33,11 @@ export default {
     }
   }
 }
-
-
 </script>
+
 <template>
-<div @click="openModal"  class="border border-slate-100 px-2 py-1 rounded-lg bg-slate-800/15">Menu</div>
-<div v-if="menuModal" class="w-screen max-h-screen bg-slate-950/90 backdrop-blur-md fixed top-0 bottom-0 left-0 right-0 z-50 px-5">
+<div @click="openModal" class="border border-slate-100 px-2 py-1 rounded-lg bg-slate-800/15">Menu</div>
+<div v-if="menuModal" class="w-screen max-h-screen bg-slate-950/90 backdrop-blur-md fixed top-0 bottom-0 left-0 right-0 z-50 px-5 modalShown">
   <div class="flex flex-col justify-between h-full pb-4">
     <section>
       <div class="lg:hidden flex justify-between items-center mt-5 px-2 text-lg">
@@ -46,7 +45,7 @@ export default {
         <p @click="menuModal = false" class="px-3 py-1 border border-slate-100 rounded-lg">Close</p>
       </div>
       <ul class="flex flex-col list-none w-full self-start mt-16">
-        <li v-for="item in menu" class="hover:text-slate-300 transition-colors duration-300 list-none border-t first:border-t-0 h-28 py-5 flex justify-center items-center border-slate-100">
+        <li v-for="item in menu" class="hover:text-slate-300 transition-colors duration-300 list-none border-t border-t-slate-700 first:border-t-0 h-28 py-5 flex justify-center items-center border-slate-100">
           <a class="contents h-full w-full text-5xl font-semibold italic" :href=item.url>{{item.name}}</a>
         </li>
       </ul>
@@ -66,5 +65,7 @@ export default {
   </div>
 </div>
 </template>
+
 <style>
+body:has(.modalShown) { position: fixed; }
 </style>
