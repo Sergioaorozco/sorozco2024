@@ -17,7 +17,7 @@ import RightArrow from "../assets/RightArrow.astro";
   {projects.map((proj) => (
     <a href={proj.URL} target="_blank" rel="noopener noreferrer" class="card group">
       <div class="shadow-sm rounded-lg lg:h-72 h-64 flex flex-col relative bg-cover bg-center justify-between overflow-clip transition-all duration-300 group-hover:brightness-75">
-        <img class="absolute h-full object-cover w-full group-hover:scale-110 transition-all duration-300" src={proj.img} alt="image of projects">
+        <img class="absolute h-full object-cover w-full lg:group-hover:scale-110 transition-all duration-300" src={proj.img} alt="image of projects">
         <ul class="relative top-2 right-2 flex gap-x-1 justify-end">
           {proj.frameworks.map((item) => (
             <li class="text-sm font-semibold bg-black/95 rounded-full px-2 text-white">{item}</li>
