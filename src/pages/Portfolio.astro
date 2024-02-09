@@ -4,15 +4,49 @@ import PortfolioView from "../components/PortfolioView.astro";
 
 ---
 <Layout title="Blog | Frontend Developer | Sergio Orozco">
-  <main class="grid lg:grid-cols-5 grid-cols-1 h-full mt-5 relative">
-    <section class="mt-5 px-3 flex flex-col text-slate-600">
-      <h1 class="text-3xl lg:text-4xl font-bold">Portfolio</h1>
-      <p class="mt-5">Latest FrontEnd projects</p>
+  <div class="flex flex-col justify-start h-[1400px]">
+    <section class="mt-5 px-3 flex flex-col justify-center text-slate-400 text-center mb-2 SectionScrollDown content-start py-10">
+      <h1 class="text-5xl lg:text-8xl font-bold leading-none">Portfolio</h1>
+      <p class="leading-none text-2xl">Latest FrontEnd projects</p>
     </section>
-    <section class="px-5 mb-10 col-span-4">
+    <section class="wrapper mx-auto px-5 mt-10 col-span-4 SectionScrollUp w-full">
     <PortfolioView></PortfolioView>
     </section>
-  </main>
+  </div>
 </Layout>
 
-<style></style>
+<style>
+
+.SectionScrollDown{
+  animation: portfolioDown linear both;
+  animation-timeline: view(block);
+  animation-range: exit;
+}
+
+.SectionScrollUp{
+  animation: portfolioUp;
+  animation-timeline: scroll();
+}
+
+@keyframes portfolioUp {
+  cover 0% {
+    transform: translateY(-50px);
+  }
+  cover 100% {
+    transfrom: translateY(-300px) scale(0) ;
+   }
+}
+
+@keyframes portfolioDown {
+  exit 10% {
+    opacity: 1;
+    transform: translateY(40px) scale(1);
+  }
+  exit 100% {
+    opacity: 0;
+    transform: translateY(60px) scale(0);
+  }
+}
+
+
+</style>
