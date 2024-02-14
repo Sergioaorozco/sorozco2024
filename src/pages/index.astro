@@ -65,8 +65,8 @@ const certifications = [
   // },
 ];
 
-  const client_id = import.meta.env.PUBLIC_CLIENT_ID;
-  const client_secret = import.meta.env.PUBLIC_CLIENT_SECRET;
+  const client_id = import.meta.env.CLIENT_ID;
+  const client_secret = import.meta.env.CLIENT_SECRET;
   const token = await fetch('https://accounts.spotify.com/api/token', {
       method: 'POST',
       headers: {
