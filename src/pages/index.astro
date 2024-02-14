@@ -67,6 +67,7 @@ const certifications = [
 
   const client_id = import.meta.env.CLIENT_ID;
   const client_secret = import.meta.env.CLIENT_SECRET;
+  const playlist = import.meta.env.CLIENT_PLAYLIST;
   const token = await fetch('https://accounts.spotify.com/api/token', {
       method: 'POST',
       headers: {
@@ -76,12 +77,12 @@ const certifications = [
       body: 'grant_type=client_credentials&client_id=your-client-id&client_secret=your-client-secret'
     })
   const tokenResult = await token.json()
-  const getTracks = await fetch('https://api.spotify.com/v1/tracks/1WFTbfjtW9DsL2txiNYKyK?si', {
+  const getTracks = await fetch(`https://api.spotify.com/v1/playlists/${playlist}`, {
     method: 'GET',
     headers: {'Authorization': `Bearer ${tokenResult.access_token}`}
   })
   const trackInfo = await getTracks.json()
-  const savedInfo = [trackInfo.album]
+  const savedInfo = [...trackInfo.tracks.items]
   console.log(savedInfo)
 
 ---
@@ -147,13 +148,16 @@ const certifications = [
       </SectionC>
     </div>
     <SectionC TitleSec="Trendy Songs">
-      <div class="flex flex-col py-2">
-        {savedInfo.map((track) => (
+      <div class="flex flex-col gap-y-3 py-2">
+        {savedInfo.map((item) => (
           <div class="flex gap-x-2 items-center">
             <picture class="rounded-lg overflow-clip">
-              <img src={track.images[2].url} alt="favorite music of the moment">
+              <img src={item.track.album.images[2].url} alt="">
             </picture>
-            <p>{track.name}</p>
+            <div>
+              <p class="font-bold text-white">{item.track.name}</p>
+              <p class="text-xs">{item.track.album.name}</p>
+            </div>
           </div>
         ))}
       </div>
