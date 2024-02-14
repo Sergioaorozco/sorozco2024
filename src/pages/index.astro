@@ -5,6 +5,7 @@ import Skills from "../components/Skills.astro";
 import SectionC from "../components/SectionC.astro";
 import Certification from "../components/Certification.astro";
 import Main from "../components/Main.astro";
+import { get } from "http";
 
 const social = [
   {
@@ -64,20 +65,27 @@ const certifications = [
   //   link: "",
   // },
 ];
----
 
-<script>
-  async function getTracks (endpoint: any, method: any, body: any) {
-  const token ='d873f7da652c4b9ba97c6f84f9e7888f'
-  const response = await fetch('https://api.spotify.com/v1/tracks/11dFghVXANMlKmJXsNCbNl', {
-    headers: { authorization: `Bearer ${token}`, },
-    method,
-    body:JSON.stringify(body)
-  });
-  console.log(response.json())
-  return await response.json();
-}
-</script>
+  const client_id = 'e67c82890c314f7c8c0f9951bd158e1a';
+  const client_secret = '69bb8f64df2a4c638375991c49d9f987';
+  const token = await fetch('https://accounts.spotify.com/api/token', {
+      method: 'POST',
+      headers: {
+        'Content-Type':'application/x-www-form-urlencoded',
+        'Authorization': 'Basic ' + btoa(client_id + ':' + client_secret)
+      },
+      body: 'grant_type=client_credentials&client_id=your-client-id&client_secret=your-client-secret'
+    })
+  const tokenResult = await token.json()
+  const getTracks = await fetch('https://api.spotify.com/v1/tracks/1WFTbfjtW9DsL2txiNYKyK?si', {
+    method: 'GET',
+    headers: {'Authorization': `Bearer ${tokenResult.access_token}`}
+  })
+  const trackInfo = await getTracks.json()
+  const savedInfo = [trackInfo.album]
+  console.log(savedInfo)
+
+---
 
 <Layout title="Sergio Orozco | Frontend Developer | VueJs, Astro, Git" description="Sergio Orozco - Frontend Developer">
   <Main />
@@ -139,14 +147,22 @@ const certifications = [
         </div>
       </SectionC>
     </div>
-    <!-- <SectionC TitleSec="Trendy Songs">
-      <div>Spotify</div>
+    <SectionC TitleSec="Trendy Songs">
+      <div class="flex flex-col py-2">
+        {savedInfo.map((track) => (
+          <div class="flex gap-x-2 items-center">
+            <picture class="rounded-lg overflow-clip">
+              <img src={track.images[2].url} alt="favorite music of the moment">
+            </picture>
+            <p>{track.name}</p>
+          </div>
+        ))}
+      </div>
     </SectionC>
     <div class="col-span-3">
       <SectionC TitleSec="Badges">
-        <button onclick="getTracks">GetTracks</button>
         <div>Spotify</div>
       </SectionC>
-    </div> -->
+    </div>
   </div>
 </Layout>
