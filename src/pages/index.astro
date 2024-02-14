@@ -5,7 +5,6 @@ import Skills from "../components/Skills.astro";
 import SectionC from "../components/SectionC.astro";
 import Certification from "../components/Certification.astro";
 import Main from "../components/Main.astro";
-import { get } from "http";
 
 const social = [
   {
@@ -90,7 +89,7 @@ const certifications = [
 <Layout title="Sergio Orozco | Frontend Developer | VueJs, Astro, Git" description="Sergio Orozco - Frontend Developer">
   <Main />
   <div class="px-5 grid gap-x-10 grid-cols-1 lg:grid-cols-4 wrapper mx-auto infoScroll">
-    <section class="col-span-2">
+    <section class="lg:col-span-2">
       <SectionC TitleSec="About Me">
       <div
         class="bg-slate-800/40 border text-slate-300 border-slate-600 rounded-lg py-6 px-4 flex justify-between flex-col mb-4 self-start"
@@ -122,7 +121,7 @@ const certifications = [
       </div>
       </SectionC>
     </section>
-    <section class="col-span-2">
+    <section class="lg:col-span-2">
       <SectionC TitleSec="Tool Stack">
         <Skills />
       </SectionC>
@@ -159,7 +158,7 @@ const certifications = [
         ))}
       </div>
     </SectionC>
-    <div class="col-span-3">
+    <div class="lg:col-span-3">
       <SectionC TitleSec="Badges">
         <div>Spotify</div>
       </SectionC>
