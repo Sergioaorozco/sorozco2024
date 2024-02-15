@@ -9,20 +9,6 @@
   }
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-  padding-right: 10px;
-}
-::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
-  border-radius: 4px;
-}
-
 body { font-family: 'Figtree', sans-serif;}
 .wrapper { max-inline-size: 95%; }
 .noiseBg {

@@ -5,6 +5,8 @@ import Skills from "../components/Skills.astro";
 import SectionC from "../components/SectionC.astro";
 import Certification from "../components/Certification.astro";
 import Main from "../components/Main.astro";
+import playIcon from 'public/icons/playIcon.svg'
+import pauseIcon from 'public/icons/pauseIcon.svg'
 
 const social = [
   {
@@ -89,11 +91,11 @@ const certifications = [
 
 <Layout title="Sergio Orozco | Frontend Developer | VueJs, Astro, Git" description="Sergio Orozco - Frontend Developer">
   <Main />
-  <div class="px-5 grid gap-x-10 grid-cols-1 lg:grid-cols-4 wrapper mx-auto infoScroll">
+  <div class="px-5 grid gap-x-10 grid-cols-1 lg:grid-cols-4 wrapper mx-auto infoScroll mb-20">
     <section class="lg:col-span-2">
       <SectionC TitleSec="About Me">
       <div
-        class="bg-slate-800/40 border text-slate-300 border-slate-600 rounded-lg py-6 px-4 flex justify-between flex-col mb-4 self-start"
+        class="bg-slate-800/40 border border-slate-600 text-slate-300  rounded-lg py-6 px-4 flex justify-between flex-col mb-4 self-start"
       >
         <p class="lg:text-lg">
           Mid-level frontend developer crafting user-friendly, engaging
@@ -147,21 +149,29 @@ const certifications = [
         </div>
       </SectionC>
     </div>
-    <SectionC TitleSec="Trendy Songs">
-      <div class="flex flex-col gap-y-3 py-2">
-        {savedInfo.map((item) => (
-          <div class="flex gap-x-2 items-center">
-            <picture class="rounded-lg overflow-clip">
-              <img src={item.track.album.images[2].url} alt="">
-            </picture>
-            <div>
-              <p class="font-bold text-white">{item.track.name}</p>
-              <p class="text-xs">{item.track.album.name}</p>
-            </div>
-          </div>
-        ))}
+    <div class="flex flex-col gap-y-3 px-3 py-3 bg-slate-800/40 border border-slate-600 rounded-md">
+      <div class="flex justify-between items-center mb-4">
+        <p class="text-slate-400 font-semibold text-xl">Trendy Songs</p>
+        <a href="https://open.spotify.com/playlist/3tzVgXTTkeQO7YsfREXUed?si=56b2bda593d54f98" class="hover:brightness-75 hover:scale-105 transition-all duration-300" target="_blank" rel="noopener noreferrer">
+          <img src="/icons/spotify.svg" alt="logoSpotify" width="20">
+        </a>
       </div>
-    </SectionC>
+      {savedInfo.map((item) => (
+        <div class="flex gap-x-2 items-center">
+          <picture class="rounded-lg overflow-clip">
+            <img src={item.track.album.images[2].url} alt="">
+          </picture>
+          <div>
+            <p class="font-bold text-white">{item.track.name}</p>
+          </div>
+          <div class="player">
+            <audio src={item.track.preview_url}></audio>
+              <playIcon></playIcon>
+              <pauseIcon></pauseIcon>
+            </div>
+        </div>
+      ))}
+      </div>
     <div class="lg:col-span-3">
       <SectionC TitleSec="Badges">
         <div>Spotify</div>
