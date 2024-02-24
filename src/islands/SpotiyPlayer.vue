@@ -14,7 +14,7 @@
     }
 
     // Other Players
-    for(let i =0; i <= props.songs; i++) {
+    for(let i =0; i <= props.songs.length; i++) {
       if(i !== index) {
         const OtherPlayers =  document.getElementById(`spotiSong_${i}`);
         console.log(OtherPlayers)
