@@ -83,7 +83,7 @@ const client_id = import.meta.env.CLIENT_ID;
     headers: {'Authorization': `Bearer ${tokenResult.access_token}`}
   })
   const trackInfo = await getTracks.json()
-  const savedInfo = [...trackInfo.tracks]
+  const savedInfo = [...trackInfo.tracks.items]
 ---
 
 <Layout title="Sergio Orozco | Frontend Developer | VueJs, Astro, Git" description="Sergio Orozco - Frontend Developer">
