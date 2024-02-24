@@ -1,7 +1,7 @@
 <script lang="js" setup>
   import {ref} from 'vue'
   import PlayIcon from "../assets/PlayIcon.vue";
-  const itemPlaying = ref(null)
+  const itemPlaying = ref('')
   const props = defineProps(['songs'])
   const playSong = (item, index) => {
     const player =  document.getElementById(`spotiSong_${index}`);
@@ -10,12 +10,23 @@
       itemPlaying.value = ref(index)
     } else {
       player.pause()
-      itemPlaying.value = ref(null)
+      itemPlaying.value = ref('')
+    }
+
+    // Other Players
+    for(let i =0; i <= 3; i++) {
+      if(i !== index) {
+        const OtherPlayers =  document.getElementById(`spotiSong_${i}`);
+        console.log(OtherPlayers)
+        OtherPlayers.pause()
+      }
     }
   }
 
-  const checkProp = (index) => {
-    return itemPlaying.value === 1
+
+  function checkProp (index)  {
+    const item =itemPlaying.value.value
+    return item === index
   }
 
 </script>
