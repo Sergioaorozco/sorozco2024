@@ -8,6 +8,9 @@
     if(player.paused) {
       player.play()
       itemPlaying.value = ref(index)
+      player.addEventListener('ended', ()=> {
+        itemPlaying.value = ref('')
+      })
     } else {
       player.pause()
       itemPlaying.value = ref('')
@@ -25,7 +28,7 @@
 
 
   function checkProp (index)  {
-    const item =itemPlaying.value.value
+    const item = itemPlaying.value.value
     return item === index
   }
 
