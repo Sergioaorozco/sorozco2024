@@ -1,28 +1,18 @@
 ---
 import RightArrow from "../assets/RightArrow.astro";
 import WebNav from "../components/WebNav.astro";
-import { useMotion } from '@vueuse/motion'
-
 ---
 <div class="overflow-clip relative h-dvh flex flex-col justify-between mb-2 bg-[url(/images/AnimatedBg.svg)] bg-no-repeat bg-cover bg-top">
   <div class="px-5">
     <WebNav></WebNav>
   </div>
-  <!-- <figure class="absolute -z-30 -top-4 bottom-0 w-screen">
-    <img src="/images/CircuitBoard.svg" class="opacity-70 object-cover object-top h-available" alt="">
-  </figure> -->
   <main class="h-fit w-full flex flex-col items-center relative">
     <div class="barlowFont flex flex-col justify-center items-center relative px-5">
-      <!-- <figure class="flex justify-center items-center top-10 bottom-3 -right-12 -z-10 absolute">
-        <img src="/icons/ribbon/SVG/Ribbon.svg" class="size-56 animate-spin animate-duration-[8000ms]" alt="ribbonText" class="relative -z-10">
-        <img src="/icons/ribbon/SVG/Icon.svg" class="size-32 absolute" alt="ribbonText" class="relative -z-10">
-      </figure> -->
       <div class="flex flex-col justify-center items-center gap-y-2">
         <img src="/icons/ribbon/SVG/SorozcoType.svg" class="aspect-[100/41] h-fit relative"  v-motion width="700" alt="principal typography of Sergio Orozco">
         <p class="text-white text-3xl lg:text-[7vh] italic font-semibold lg:leading-none">Frontend Developer</p>
       </div>
     </div>
-
   <!-- figures and Animations -->
   </main>
   <div class="border-t border-slate-600 w-full pb-12 px-5 h-fit">
