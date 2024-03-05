@@ -133,7 +133,7 @@ const client_id = import.meta.env.CLIENT_ID;
               {
                 social.map((net) => (
                   <li class="hover:brightness-150 hover:filter transition-all duration-200 size-10">
-                    <a href={net.URL} target="_blank" rel="noopener noreferrer">
+                    <a href={net.URL} target="_blank" rel="noopener noreferrer" aria-label="social media">
                       <img width="60" height="60" src={net.img} alt={net.img} />
                     </a>
                   </li>

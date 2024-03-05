@@ -6,18 +6,17 @@ import RightArrow from "../assets/RightArrow.astro";
 const menu = [
    {name: 'About', url:'/'},
    {name: 'Portfolio', url:'/portfolio'},
-  //  {name: 'Blog', url:'/blog'},
 ]
 ---
 
 <!-- Desktop Navigation -->
 <nav class="lg:flex justify-between items-center pt-5 m-auto z-10 relative top-0 hidden text-white">
-  <a href="/" class="size-9"><img src="/images/header-logo.svg" alt="Logo Sergio Orozco"></a>
+  <a href="/" class="size-9"><img src="/images/header-logo.svg" alt="Logo Sergio Orozco" />
   <div class="flex gap-x-3 items-center">
     <ul class="flex gap-x-3 text-white text-lg">
       {
         menu.map(item => (
-          <li class="hover:text-slate-300 transition-colors duration-300"><a href={item.url}>{item.name}</a></li>
+          <li class="hover:text-slate-300 transition-colors duration-300"><a href={item.url}/>{item.name}</li>
         ))
       }
     </ul>
@@ -28,7 +27,7 @@ const menu = [
 
 <!-- Mobile Navigation -->
 <nav class="lg:hidden flex justify-between items-center mt-5 px-2 text-lg">
-  <a href="/" class="size-8"><img src="/images/header-logo.svg" alt="Logo Sergio Orozco"></a>
+  <a href="/" class="size-8"><img src="/images/header-logo.svg" alt="Logo Sergio Orozco" />
   <MenuMobile client:load>
     <span><RightArrow /></span>
   </MenuMobile>
