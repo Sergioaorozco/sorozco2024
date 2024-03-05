@@ -116,10 +116,9 @@ const client_id = import.meta.env.CLIENT_ID;
     <section class="flex flex-col lg:flex-row lg:gap-x-5">
       <SectionC TitleSec="About Me">
       <div
-        class="bg-slate-800/40 border border-slate-600 text-slate-300 gap-y-4 rounded-lg py-6 px-4 flex justify-between flex-col mb-4 self-start"
+        class="bg-slate-800/40 border border-slate-600 text-slate-300 gap-y-4 rounded-lg py-6 px-4 flex justify-between flex-col self-start h-full"
       >
-      <div class="flex lg:flex-row gap-3 items-center">
-        <img width="100" src="/images/Profile-pic.webp" class="hidden lg:block object-contain" alt="Profile Picture">
+      <div class="flex lg:flex-row gap-x-6 items-center">
         <p class="lg:text-lg text-slate-100">
           Mid-level frontend developer crafting user-friendly, engaging
           experiences with VueJs and Astro. Proficient in agile
@@ -129,8 +128,7 @@ const client_id = import.meta.env.CLIENT_ID;
 
       </div>
         <picture class="flex lg:flex-col flex-row gap-3">
-          <img src="/images/Profile-pic.webp" class="lg:hidden block size-20 object-contain" alt="Profile Picture">
-          <div class="flex flex-col lg:flex-row justify-start lg:justify-between w-full items-center gap-y-2">
+          <div class="flex gap-x-5 flex-row justify-between w-full items-center gap-y-2">
             <ul class="flex gap-x-2 items-center justify-center lg:justify-start self-start">
               {
                 social.map((net) => (
@@ -155,7 +153,7 @@ const client_id = import.meta.env.CLIENT_ID;
     </section>
     <div>
       <SectionC TitleSec="Awards and Certifications">
-        <div class="flex flex-col lg:flex-row gap-3">
+        <div class="flex flex-col lg:flex-row gap-8">
           {
             certifications.map((award) => (
               <Certification
@@ -182,8 +180,8 @@ const client_id = import.meta.env.CLIENT_ID;
             <div class="bg-slate-800/40 border border-slate-600 rounded-md py-4 px-3 flex-auto">
               <picture class="flex flex-col gap-y-2 w-fit">
                 <img width="40" src={key.image} alt="Code Icon" class="fill-white">
-                <span class="text-2xl font-bold text-white leading-none mt-2">{key.title}</span>
-                <span class="text-xl leading-none">{key.description}</span>
+                <span class="text-xl font-bold text-white leading-none mt-2">{key.title}</span>
+                <span class="text-base leading-none">{key.description}</span>
               </picture>
             </div>
           ))}
