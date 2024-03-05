@@ -2,7 +2,7 @@
 import Layout from "../layouts/LayoutA.astro";
 import RightArrow from "../assets/RightArrow.astro";
 import Skills from "../components/Skills.astro";
-import SectionC from "../components/SectionC.astro";
+import Block from "../components/SectionC.astro";
 import Certification from "../components/Certification.astro";
 import Main from "../components/Main.astro";
 import SpotifyPlayer from '../islands/SpotiyPlayer.vue'
@@ -114,7 +114,7 @@ const client_id = import.meta.env.CLIENT_ID;
   <Main />
   <div class="px-5 flex flex-col gap-y-3 wrapper mx-auto infoScroll mb-20">
     <section class="flex flex-col lg:flex-row lg:gap-x-5 mb-8">
-      <SectionC TitleSec="About Me">
+      <Block TitleSec="About Me">
       <div
         class="bg-slate-800/40 border border-slate-600 text-slate-300 gap-y-4 rounded-lg py-6 px-4 flex justify-between flex-col self-start h-full"
       >
@@ -146,13 +146,13 @@ const client_id = import.meta.env.CLIENT_ID;
           </div>
         </picture>
       </div>
-      </SectionC>
-      <SectionC TitleSec="Tool Stack">
+      </Block>
+      <Block TitleSec="Tool Stack">
         <Skills />
-      </SectionC>
+      </Block>
     </section>
-    <div class="mb-8">
-      <SectionC TitleSec="Awards and Certifications">
+    <section class="mb-8">
+      <Block TitleSec="Awards and Certifications">
         <div class="flex flex-col lg:flex-row gap-8">
           {
             certifications.map((award) => (
@@ -169,11 +169,11 @@ const client_id = import.meta.env.CLIENT_ID;
             ))
           }
         </div>
-      </SectionC>
-    </div>
-    <section class="flex flex-col lg:flex-row gap-5 mb-8">
+      </Block>
+    </section>
+    <section class="flex flex-col lg:flex-row gap-7 mb-8">
     <SpotifyPlayer songs={savedInfo} client:only></SpotifyPlayer>
-    <SectionC TitleSec="Latest Learnings">
+    <Block TitleSec="Latest Learnings">
         <div class="flex flex-wrap gap-3 h-full">
           {
             learnings.map((key) => (
@@ -186,7 +186,7 @@ const client_id = import.meta.env.CLIENT_ID;
             </div>
           ))}
           </div>
-      </SectionC>
+      </Block>
     </section>
   </div>
 </Layout>
