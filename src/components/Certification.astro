@@ -3,7 +3,7 @@ import RightArrow from "../assets/RightArrow.astro";
 const { title, subTitle, image, year, description,emphasis,hideArrow, link} = Astro.props;
 ---
 
-<a href={link} class="bg-gradient-to-b flex flex-grow from-slate-950 rounded-lg py-4 px-5 overflow-clip relative group h-52" class:list={[`${emphasis}`]}>
+<a href={link} class="bg-gradient-to-b flex flex-grow from-slate-950 rounded-lg py-4 px-5 overflow-clip relative group h-52 border border-slate-700" class:list={[`${emphasis}`]}>
   <div class="relative z-10">
     <p class="text-2xl font-semibold text-slate-300">{title}</p>
     <p>{subTitle}</p>
