@@ -113,7 +113,7 @@ const client_id = import.meta.env.CLIENT_ID;
 <Layout title="Sergio Orozco | Frontend Developer | VueJs, Astro, Git" description="Sergio Orozco - Frontend Developer">
   <Main />
   <div class="px-5 flex flex-col gap-y-3 wrapper mx-auto infoScroll mb-20">
-    <section class="flex flex-col lg:flex-row lg:gap-x-5">
+    <section class="flex flex-col lg:flex-row lg:gap-x-5 mb-8">
       <SectionC TitleSec="About Me">
       <div
         class="bg-slate-800/40 border border-slate-600 text-slate-300 gap-y-4 rounded-lg py-6 px-4 flex justify-between flex-col self-start h-full"
@@ -151,7 +151,7 @@ const client_id = import.meta.env.CLIENT_ID;
         <Skills />
       </SectionC>
     </section>
-    <div>
+    <div class="mb-8">
       <SectionC TitleSec="Awards and Certifications">
         <div class="flex flex-col lg:flex-row gap-8">
           {
@@ -171,10 +171,10 @@ const client_id = import.meta.env.CLIENT_ID;
         </div>
       </SectionC>
     </div>
-    <section class="flex flex-col lg:flex-row gap-5">
+    <section class="flex flex-col lg:flex-row gap-5 mb-8">
     <SpotifyPlayer songs={savedInfo} client:only></SpotifyPlayer>
     <SectionC TitleSec="Latest Learnings">
-        <div class="flex flex-wrap gap-3">
+        <div class="flex flex-wrap gap-3 h-full">
           {
             learnings.map((key) => (
             <div class="bg-slate-800/40 border border-slate-600 rounded-md py-4 px-3 flex-auto">

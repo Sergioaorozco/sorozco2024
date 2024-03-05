@@ -13,20 +13,15 @@ body { font-family: 'Figtree', sans-serif;}
 .wrapper { max-inline-size: 95%; }
 .noiseBg {
   background: url('/images/noisebg.png');
-  background-color: rgb(28, 32, 46);
-  /* background-color: rgb(30, 41, 59); */
-}
-.noiseBg:after {
-animation: grain 8s steps(10) infinite;
-background-image: url('/images/noisebg.png');
-content: "";
-height: 300%;
-left: -50%;
-opacity: 0.3;
-position: fixed;
-z-index: -10;
-top: -100%;
-width: 300%;
+  background-color: rgba(22, 22, 22, 0.091);
+  background-repeat: repeat;
+  inset: -50%;
+  position: fixed;
+  height: 200vh;
+  width: 200%;
+  pointer-events: none;
+
+  animation: noise 0.1s infinite;
 }
 
 .infoScroll {
@@ -48,17 +43,40 @@ width: 300%;
   animation-range: exit;
 }
 
-@keyframes grain {
-0%, 100% { transform:translate(0, 0) }
-10% { transform:translate(-5%, -10%) }
-20% { transform:translate(-15%, 5%) }
-30% { transform:translate(7%, -25%) }
-40% { transform:translate(-5%, 25%) }
-50% { transform:translate(-15%, 10%) }
-60% { transform:translate(15%, 0%) }
-70% { transform:translate(0%, 15%) }
-80% { transform:translate(3%, 35%) }
-90% { transform:translate(-10%, 10%) }
+@keyframes noise {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  10% {
+    transform: translate3d(-5%, -5%, 0);
+  }
+  20% {
+    transform: translate3d(-10%, 5%, 0);
+  }
+  30% {
+    transform: translate3d(5%, -10%, 0);
+  }
+  40% {
+    transform: translate3d(-5%, 15%, 0);
+  }
+  50% {
+    transform: translate3d(-10%, 5%, 0);
+  }
+  60% {
+    transform: translate3d(15%, 0, 0);
+  }
+  70% {
+    transform: translate3d(15%, 15%, 0);
+  }
+  80% {
+    transform: translate3d(10%, 5%, 0);
+  }
+  90% {
+    transform: translate3d(5%, 10%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 
