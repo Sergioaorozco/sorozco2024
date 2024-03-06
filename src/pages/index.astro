@@ -114,7 +114,7 @@ const client_id = import.meta.env.CLIENT_ID;
         class="bg-slate-800/40 hover:bg-slate-700/40 border border-slate-600 text-slate-300 gap-y-4 rounded-lg py-6 px-4 flex justify-between flex-col self-start h-full transition-all duration-300"
       >
         <span class="flex lg:flex-row gap-x-6 items-center">
-          <p class="lg:text-lg text-slate-100">
+          <p class="lg:text-lg text-slate-100 text-pretty">
             Mid-level frontend developer crafting user-friendly, engaging
             experiences with VueJs and Astro. Proficient in agile
             methodologies(SAFe) and teamwork, I bring a strong work ethic and
@@ -122,9 +122,9 @@ const client_id = import.meta.env.CLIENT_ID;
           </p>
 
         </span>
-        <picture class="flex lg:flex-col flex-row gap-3">
-          <div class="flex gap-x-5 flex-row justify-between w-full items-center gap-y-2">
-            <ul class="flex gap-x-2 items-center justify-center lg:justify-start self-start">
+        <picture>
+          <div class="flex gap-x-5 flex-col lg:flex-row justify-center lg:justify-between w-full items-center gap-y-2">
+            <ul class="flex gap-x-2 items-center justify-center lg:justify-start self-center">
               {
                 social.map((net) => (
                   <li class="hover:brightness-150 hover:filter transition-all duration-200 size-10">
